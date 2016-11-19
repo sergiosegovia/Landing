@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Landing Page</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+{% block content %}
+<!-- Static navbar -->
+ <nav class="navbar navbar-default navbar-static-top">
+   <div class="container">
+     <div class="navbar-header">
+       <a class="navbar-brand" href="#">
+         <img src="{% static 'images/logo-black@2x.png' %}" alt="Noria Studio">
+       </a>
+     </div>
+     <div id="navbar">
+
+       <ul class="nav navbar-nav navbar-right">
+         <li>3003270690</li>
+         <li>info@noriastudio.com</li>
+       </ul>
+     </div><!--/.nav-collapse -->
+   </div>
+ </nav>
+
+ <div class="">
+  <img class="img-responsive" src="{% static 'images/programacion-web.gif' %}" alt="">
+ </div>
+
+ <div class="container">
+   <div class="main">
+     <h3>Desarrollo Web y Móvil <br>para tu Empresa</h3>
+     <h4>Comienza a Vender Online <br>desde $650.000</h4>
+   </div>
+ </div>
+
+ <div class="call-to-action">
+  <a href="/"><h4>Recibe asesoría gratuita</h4></a>
+ </div>
+
+ <div class="container">
+   <div class="question">
+    <p>¿Estás en la zona de Salitre?. Así como te encontramos a ti podemos encontrar a tus clientes y llevarlos a dónde necesitas para vender.</p>
+   </div>
+   <form method="post">
+     {% csrf_token %}
+     {{ form.as_p }}
+     <div class="btn-form">
+        <button type="submit" class="btn-success" >Solicitar Información</button>
+     </div>
+
+   </form>
+ </div>
+
+
+
+
+
+{% endblock %}
+</body>
+</html>

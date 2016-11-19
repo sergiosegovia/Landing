@@ -1,0 +1,51 @@
+h3, h4 {
+  margin: 0;
+}
+
+.navbar {
+  margin: 0
+}
+
+.navbar-default {
+  border: none;
+}
+
+.navbar-brand>img {
+  max-width: 90px
+}
+
+.navbar-header {
+  float: left;
+}
+
+.navbar-nav {
+  float: right;
+  padding-right: 1em;
+}
+
+#navbar {
+  float: right;
+}
+
+.main, .question {
+  margin: 1em 0;
+}
+
+.main h4 {
+  margin-top: 1em;
+}
+
+.call-to-action {
+  background-color: #1a821a;
+  height: 50px;
+  padding: 1em;
+  text-align: center;
+}
+
+.call-to-action > a {
+  color: white;
+}
+
+.btn-form {
+  text-align: center;
+}
